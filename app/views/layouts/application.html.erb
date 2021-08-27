@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= favicon_link_tag%>
+    <%= favicon_link_tag asset_path('coffee.png') %>
   </head>
 
   <body>
@@ -20,8 +20,14 @@
         <%= render 'layouts/nav' %>
     </div>
     </div>
+    
     <div class=" ui container">
-      <%= yield %>
-    </div>
+    <%= render 'layouts/messages' %>
+  </div>
+
+      <div class="ui container"><%= yield %></div>
+      
+      
+    
   </body>
 </html>
